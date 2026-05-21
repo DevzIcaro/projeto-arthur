@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar";
 import Hero from "@/components/Hero";
 import Specialities from "@/components/Specialities";
+import Benefits from "@/components/Benefits";
 ---
 
 <Layout>
@@ -14,6 +15,9 @@ import Specialities from "@/components/Specialities";
     </div>
 	<div id="especialidades">
 		<Specialities client:load/>
+	</div>
+	<div id="benefits">
+		<Benefits client:load/>
 	</div>
   </main>
 </Layout>
