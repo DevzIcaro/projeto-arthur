@@ -5,6 +5,10 @@ import Navbar from "../components/Navbar";
 import Hero from "@/components/Hero";
 import Specialities from "@/components/Specialities";
 import Benefits from "@/components/Benefits";
+import AboutSection from "@/components/AboutUs";
+import Formations from "@/components/Formations";
+import Results from "@/components/Results";
+import Testimonials from "@/components/Testimonials";
 ---
 
 <Layout>
@@ -19,5 +23,17 @@ import Benefits from "@/components/Benefits";
 	<div id="benefits">
 		<Benefits client:load/>
 	</div>
+  <div id="about">
+    <AboutSection client:load/>
+  </div>
+  <div id="formations">
+    <Formations client:load/>
+  </div>
+  <div id="resultados">
+    <Results client:load/>
+  </div>
+  <div id="testimonials">
+    <Testimonials client:load/>
+  </div>
   </main>
 </Layout>

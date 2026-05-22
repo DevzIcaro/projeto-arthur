@@ -8,6 +8,7 @@ const links = [
     { name: "Especialidades", href: "#especialidades" },
     { name: "Benefícios", href: "#beneficios" },
     { name: "Sobre", href: "#sobre" },
+    { name: "Formações", href: "#formacoes" },
     { name: "Resultados", href: "#resultados" },
     { name: "Avaliações", href: "#avaliacoes" },
     { name: "FAQ", href: "#faq" },
