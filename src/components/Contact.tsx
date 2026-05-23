@@ -9,8 +9,8 @@ const contactOptions = [
   {
     name: "WhatsApp",
     icon: MessageCircle,
-    label: "+55 (17) 9XXXX-XXXX",
-    href: "https://wa.me/55179XXXXXXXX",
+    label: "+55 (17) 98111-1087",
+    href: "https://wa.me/5517981111087",
   },
   {
     name: "Instagram",
@@ -28,22 +28,26 @@ const contactOptions = [
     name: "Localização",
     icon: MapPin,
     label: "Santa Fé do Sul - SP",
-    href: "https://maps.app.goo.gl/XXXXXXXX",
+    href: "https://maps.app.goo.gl/fXSkHhM6XPEUW3Nn7",
   },
 ];
 
 export default function Contact() {
   return (
-    <section className="w-full py-24 bg-[#0B0B0B] text-[#F5F5F5]">
+    <section className="w-full py-24 bg-[#0B0B0B] text-[#F5F5F5] relative overflow-hidden">
+      
+      <div className="absolute bottom-35 right-10 w-[750px] h-[500px] bg-[#D62828]/20 blur-[150px] rounded-full" />
+
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Lado Esquerdo: Info e Botões */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
+
             <h2 className="text-[#D62828] text-xs font-bold tracking-[0.3em] uppercase mb-4">
               Conexão Direta
             </h2>
@@ -51,7 +55,7 @@ export default function Contact() {
               Pronto para elevar <br />
               <span className="text-[#F5F5F5]/50">sua performance?</span>
             </h3>
-            
+
             <div className="grid gap-4">
               {contactOptions.map((item, index) => (
                 <motion.a
@@ -82,12 +86,12 @@ export default function Contact() {
           >
             <div className="absolute inset-0 bg-[#111111] z-0" />
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.0759082721794!2d-50.57398182416979!3d-20.21397444738586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94961b7f038f4d93%3A0x6a2c3f8e5f8f8b88!2sSanta%20F%C3%A9%20do%20Sul%20-%20SP!5e0!3m2!1sen!2sbr!4v1715876000000!5m2!1sen!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303.46776282584375!2d-50.931682959568455!3d-20.213584136463112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9499c1537fc12db9%3A0xf498c9eab9b9d4e!2sR.%20Vinte%2C%2082%2C%20Santa%20F%C3%A9%20do%20Sul%20-%20SP%2C%2015775-000!5e0!3m2!1spt-BR!2sbr!4v1779563126052!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
-              style={{ 
-                border: 0, 
-                filter: "grayscale(0.3) invert(0.9) contrast(0.9)" 
+              style={{
+                border: 0,
+                filter: "grayscale(0.3) invert(0.9) contrast(0.9)"
               }}
               allowFullScreen
               loading="lazy"

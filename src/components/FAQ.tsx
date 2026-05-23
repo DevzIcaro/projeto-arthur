@@ -30,10 +30,8 @@ const faqData = [
 
 export default function FAQ() {
   return (
-    <section className="w-full py-24 bg-[#0B0B0B] relative overflow-hidden">
+    <section className="w-full py-24 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B] to-[#2a0808] relative overflow-hidden">
       {/* Glow de fundo */}
-      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D62828]/10 blur-[150px] rounded-full" />
-
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -62,10 +60,10 @@ export default function FAQ() {
                 value={`item-${index}`}
                 className="border border-white/10 bg-[#111111] hover:border-[#D62828]/50 transition-colors duration-300 px-6"
               >
-                <AccordionTrigger className="text-[#F5F5F5] hover:no-underline py-6 text-left text-lg font-medium">
+                <AccordionTrigger className="text-[#F5F5F5] cursor-pointer hover:no-underline py-6 text-left text-lg font-medium">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-[#F5F5F5]/70 leading-relaxed pb-6 text-base">
+                <AccordionContent className="text-[#F5F5F5]/70 cursor-pointer leading-relaxed pb-6 text-base">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

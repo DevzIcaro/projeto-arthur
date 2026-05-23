@@ -31,13 +31,14 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="w-full py-24 bg-[#0B0B0B] relative overflow-hidden">
-      {/* Glow Cinematográfico de Fundo */}
+    // Gradiente: Preto no topo (#0B0B0B) para Vermelho Escuro na base (#2a0808)
+    <section className="w-full py-24 bg-gradient-to-b from-[#0B0B0B] via-[#0B0B0B] to-[#2a0808] relative overflow-hidden">
+      
+      {/* Glow Cinematográfico (Mantido sutil) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#D62828]/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-4 md:px-16 lg:px-24 relative z-10">
-        
-        {/* Títulos */}
+
         <div className="mb-16 text-left">
           <h2 className="text-[#D62828] text-xs font-bold tracking-[0.3em] uppercase mb-2">
             Prova Social
@@ -47,7 +48,6 @@ export default function Testimonials() {
           </h3>
         </div>
 
-        {/* Instância Principal do Carrossel */}
         <Carousel 
           opts={{
             align: "start",
@@ -55,14 +55,14 @@ export default function Testimonials() {
           }}
           className="w-full relative"
         >
-          {/* Track dos Cards com espaçamento corrigido */}
           <CarouselContent className="-ml-4">
             {testimonials.map((t, index) => (
               <CarouselItem 
                 key={index} 
                 className="pl-4 basis-full md:basis-1/2"
               >
-                <Card className="bg-[#111111] border-white/5 p-6 md:p-8 h-full flex flex-col justify-between hover:border-[#D62828]/30 transition-all duration-500 rounded-none select-none">
+                {/* Cards com fundo levemente transparente para interagir com o gradiente */}
+                <Card className="bg-[#111111]/80 backdrop-blur-sm border-white/5 p-6 md:p-8 h-full flex flex-col justify-between hover:border-[#D62828]/30 transition-all duration-500 rounded-none select-none">
                   <CardContent className="p-0 flex flex-col h-full justify-between">
                     <div>
                       <Quote className="w-8 h-8 text-[#D62828] opacity-40 mb-6" />
@@ -85,15 +85,11 @@ export default function Testimonials() {
             ))}
           </CarouselContent>
 
-          {/* CONTROLES DESKTOP: Flutuam perfeitamente para fora dos cards nas extremidades */}
-          <CarouselPrevious 
-            className="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-12 lg:-left-16 bg-[#D62828] hover:bg-[#D62828]/90 text-white border-none rounded-full w-14 h-14 items-center justify-center transition-all duration-300 shadow-lg shadow-[#D62828]/10" 
-          />
-          <CarouselNext 
-            className="hidden md:flex absolute top-1/2 -translate-y-1/2 -right-12 lg:-right-16 bg-[#D62828] hover:bg-[#D62828]/90 text-white border-none rounded-full w-14 h-14 items-center justify-center transition-all duration-300 shadow-lg shadow-[#D62828]/10" 
-          />
+          {/* Controles Desktop */}
+          <CarouselPrevious className="hidden md:flex absolute top-1/2 -translate-y-1/2 -left-12 lg:-left-16 bg-[#D62828] hover:bg-[#D62828]/90 text-white border-none rounded-full w-14 h-14 items-center justify-center transition-all duration-300 shadow-lg shadow-[#D62828]/10" />
+          <CarouselNext className="hidden md:flex absolute top-1/2 -translate-y-1/2 -right-12 lg:-right-16 bg-[#D62828] hover:bg-[#D62828]/90 text-white border-none rounded-full w-14 h-14 items-center justify-center transition-all duration-300 shadow-lg shadow-[#D62828]/10" />
 
-          {/* CONTROLES MOBILE: Alinhados estritamente na mesma linha, centralizados abaixo do bloco */}
+          {/* Controles Mobile */}
           <div className="flex md:hidden w-full justify-center items-center gap-4 mt-8">
             <CarouselPrevious className="static translate-x-0 translate-y-0 bg-[#D62828] hover:bg-[#D62828]/90 text-white border-none rounded-full w-12 h-12 flex items-center justify-center" />
             <CarouselNext className="static translate-x-0 translate-y-0 bg-[#D62828] hover:bg-[#D62828]/90 text-white border-none rounded-full w-12 h-12 flex items-center justify-center" />

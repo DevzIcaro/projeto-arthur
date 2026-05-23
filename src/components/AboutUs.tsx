@@ -45,7 +45,7 @@ export default function AboutSection() {
             <h2 className="text-[#D62828] font-bold tracking-[0.2em] uppercase text-sm mb-4">A Ciência por trás do movimento</h2>
             <h3 className="text-5xl md:text-6xl font-bold text-[#F5F5F5] leading-tight tracking-tight mb-6">
               Expertise de Elite para <br />
-              <span className="text-[#F5F5F5]/40">Resultados Reais</span>
+              <span className="text-[#D62828]/90">Resultados Reais</span>
             </h3>
             <p className="text-[#F5F5F5]/60 text-lg leading-relaxed max-w-lg">
               No RATH Performance, não tratamos sintomas — otimizamos sistemas humanos. Nossa metodologia integra a biomecânica avançada à recuperação ativa, garantindo que cada atleta alcance seu pico de performance com segurança absoluta.
@@ -60,13 +60,14 @@ export default function AboutSection() {
               { label: "Protocolos", value: "30+" },
             ].map((stat, i) => (
               <div key={i}>
-                <div className="text-2xl font-bold text-[#F5F5F5]">{stat.value}</div>
+                <div className="text-2xl font-bold text-[#D62828]">{stat.value}</div>
                 <div className="text-xs text-[#F5F5F5]/40 uppercase tracking-widest mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </div>
+            <div className="absolute top-60 right-55 w-[400px] h-[400px] bg-[#D62828]/10 blur-[150px] rounded-full" />
     </section>
   );
 }

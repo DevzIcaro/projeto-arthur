@@ -26,7 +26,7 @@ const formations = [
 
 export default function Formations() {
   return (
-    <section className="py-24 bg-[#0B0B0B] border-t border-white/5">
+    <section className="w-full py-24 bg-gradient-to-b from-[#0B0B0B] via-[#0B0B0B] to-[#2a0808] relative overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

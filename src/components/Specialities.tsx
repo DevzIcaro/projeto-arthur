@@ -14,17 +14,19 @@ const specialties = [
 
 export default function Specialties() {
   return (
-    <section className="py-24 bg-[#0B0B0B] relative overflow-hidden">
+    // Gradiente aplicado aqui: do cinza escuro (#111111) ao preto profundo (#0B0B0B)
+    <section className="py-24 bg-gradient-to-b from-[#111111] to-[#0B0B0B] relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-20 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-[#F5F5F5] tracking-tight mb-4">
             Metodologia <span className="text-[#D62828]">RATH</span>
           </h2>
+          <div className="h-1 w-20 bg-[#D62828] mx-auto mt-6" />
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 relative">
-          {/* Linhas de Conexão Estilizadas */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0">
+          {/* Linhas de Conexão - Mantidas com z-index baixo */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0 opacity-40">
              <defs>
                <filter id="glow">
                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
@@ -41,7 +43,7 @@ export default function Specialties() {
                 strokeLinecap="round"
                 filter="url(#glow)"
                 initial={{ pathLength: 0, opacity: 0 }}
-                whileInView={{ pathLength: 1, opacity: 0.6 }}
+                whileInView={{ pathLength: 1, opacity: 0.4 }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
              />
           </svg>
@@ -53,10 +55,10 @@ export default function Specialties() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group p-8 border border-white/5 bg-[#111111] relative z-10 overflow-hidden"
+              className="group p-8 border border-white/5 bg-[#0B0B0B]/40 backdrop-blur-sm relative z-10 overflow-hidden hover:border-[#D62828]/30 transition-all duration-500"
             >
-              {/* O Brilho Vermelho na base (Bottom Glow) */}
-              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-16 bg-[#D62828]/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              {/* Brilho sutil no hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#D62828]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="mb-6 inline-block p-3 bg-[#0B0B0B] border border-white/10 group-hover:border-[#D62828] transition-colors">
                 <item.icon className="w-8 h-8 text-[#D62828]" />

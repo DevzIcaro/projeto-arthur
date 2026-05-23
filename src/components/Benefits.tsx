@@ -33,7 +33,7 @@ const benefits = [
 
 export default function Benefits() {
   return (
-    <section className="relative w-full py-24 px-6 bg-[#0B0B0B] overflow-hidden">
+    <section className="w-full py-24 px-6 bg-linear-to-t from-[#111111] to-[#0B0B0B] relative overflow-hidden">
       {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#D62828]/5 blur-[150px] rounded-full pointer-events-none" />
 
