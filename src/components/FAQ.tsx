@@ -1,0 +1,78 @@
+"use client";
+
+import * as React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { motion } from "framer-motion";
+
+const faqData = [
+  {
+    question: "Como funciona a avaliação biomecânica?",
+    answer: "Utilizamos sensores de captura de movimento e análise de força em tempo real para mapear padrões de desequilíbrio e ineficiência técnica, criando um protocolo personalizado para sua performance.",
+  },
+  {
+    question: "Qual o tempo médio de recuperação para lesões?",
+    answer: "Cada protocolo é individualizado. Trabalhamos com métricas de carga progressiva, garantindo que o retorno ao esporte ocorra com segurança absoluta e otimização dos tecidos lesionados.",
+  },
+  {
+    question: "Atletas amadores podem passar pelo protocolo RATH?",
+    answer: "Sim. A metodologia RATH é aplicada para qualquer indivíduo que busca excelência física, seja para prevenção de lesões, ganho de potência ou longevidade esportiva.",
+  },
+  {
+    question: "Como agendar uma consulta inicial?",
+    answer: "O agendamento é feito através de nosso portal de atendimento. Recomendamos uma consulta de triagem inicial para que possamos entender seu histórico e objetivos antes do primeiro atendimento no laboratório.",
+  },
+];
+
+export default function FAQ() {
+  return (
+    <section className="w-full py-24 bg-[#0B0B0B] relative overflow-hidden">
+      {/* Glow de fundo */}
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-[#D62828]/10 blur-[150px] rounded-full" />
+
+      <div className="container mx-auto px-6 max-w-3xl relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16 text-center"
+        >
+          <h2 className="text-[#D62828] text-xs font-bold tracking-[0.3em] uppercase mb-4">
+            Dúvidas Frequentes
+          </h2>
+          <h3 className="text-4xl md:text-5xl font-bold text-[#F5F5F5] tracking-tight">
+            Ciência e Clareza
+          </h3>
+        </motion.div>
+
+        <Accordion type="single" collapsible className="w-full space-y-4">
+          {faqData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <AccordionItem 
+                value={`item-${index}`}
+                className="border border-white/10 bg-[#111111] hover:border-[#D62828]/50 transition-colors duration-300 px-6"
+              >
+                <AccordionTrigger className="text-[#F5F5F5] hover:no-underline py-6 text-left text-lg font-medium">
+                  {item.question}
+                </AccordionTrigger>
+                <AccordionContent className="text-[#F5F5F5]/70 leading-relaxed pb-6 text-base">
+                  {item.answer}
+                </AccordionContent>
+              </AccordionItem>
+            </motion.div>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+}

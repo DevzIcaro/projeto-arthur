@@ -9,6 +9,9 @@ import AboutSection from "@/components/AboutUs";
 import Formations from "@/components/Formations";
 import Results from "@/components/Results";
 import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 ---
 
 <Layout>
@@ -20,20 +23,29 @@ import Testimonials from "@/components/Testimonials";
 	<div id="especialidades">
 		<Specialities client:load/>
 	</div>
-	<div id="benefits">
+	<div id="beneficios">
 		<Benefits client:load/>
 	</div>
-  <div id="about">
+  <div id="sobre">
     <AboutSection client:load/>
   </div>
-  <div id="formations">
+  <div id="formacoes">
     <Formations client:load/>
   </div>
   <div id="resultados">
     <Results client:load/>
   </div>
-  <div id="testimonials">
+  <div id="avaliacoes">
     <Testimonials client:load/>
+  </div>
+  <div id="faq">
+    <FAQ client:load/>
+  </div>
+  <div id="contatos">
+    <Contact client:load/>
+  </div>
+  <div id="footer">
+    <Footer client:load/>
   </div>
   </main>
 </Layout>
