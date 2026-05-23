@@ -35,7 +35,6 @@ export default function Results() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-16 items-start">
           
-          {/* Conteúdo Esquerdo */}
           <div className="lg:w-1/3">
             <h2 className="text-[#D62828] text-xs font-bold tracking-[0.3em] uppercase mb-4">Impacto Real</h2>
             <h3 className="text-4xl md:text-5xl font-bold text-[#F5F5F5] leading-tight mb-6">
@@ -47,7 +46,6 @@ export default function Results() {
             </p>
           </div>
 
-          {/* Grid de Resultados */}
           <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-y-12">
             {results.map((item, index) => (
               <Counter key={index} {...item} />

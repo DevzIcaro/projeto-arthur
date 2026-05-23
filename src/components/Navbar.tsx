@@ -25,7 +25,6 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Trava o scroll do corpo da página quando o menu está aberto
     useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = "hidden";
@@ -51,14 +50,12 @@ export default function Navbar() {
         <header 
             className={cn(
                 "fixed top-0 left-0 w-full z-[150] transition-all duration-500",
-                // Removemos o blur do header quando o menu abre para evitar bugs visuais
                 isOpen ? "bg-transparent" : (scrolled 
                     ? "bg-black/90 backdrop-blur-md border-b border-white/10 py-3" 
                     : "bg-gradient-to-b from-black/95 to-transparent py-5")
             )}
         >
             <div className="container mx-auto px-6 flex items-center justify-between">
-                {/* Logo */}
                 <a href="#hero" onClick={(e) => scrollToSection(e, "#hero")} className="relative z-[201]">
                     <img 
                         src="./src/assets/logo.png" 
@@ -67,7 +64,6 @@ export default function Navbar() {
                     />
                 </a>
 
-                {/* Desktop Nav */}
                 <nav className="hidden lg:flex items-center gap-8">
                     {links.map((link) => (
                         <a
@@ -81,7 +77,6 @@ export default function Navbar() {
                     ))}
                 </nav>
 
-                {/* Botão Hamburger */}
                 <button 
                     className="lg:hidden relative z-[201] text-white p-2"
                     onClick={() => setIsOpen(!isOpen)}
@@ -90,11 +85,9 @@ export default function Navbar() {
                 </button>
             </div>
 
-            {/* ELEMENTOS DE MENU FORA DO CONTAINER PARA EVITAR CLIPPING */}
             <AnimatePresence>
                 {isOpen && (
                     <>
-                        {/* Overlay: fixed inset-0 garante que cubra a viewport toda */}
                         <motion.div 
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -103,7 +96,6 @@ export default function Navbar() {
                             className="fixed inset-0 bg-black/98 backdrop-blur-xl z-[190] h-[100dvh] w-screen"
                         />
                         
-                        {/* Menu Lateral */}
                         <motion.div 
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}

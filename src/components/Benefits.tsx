@@ -34,7 +34,6 @@ const benefits = [
 export default function Benefits() {
   return (
     <section className="w-full py-24 px-6 bg-linear-to-t from-[#111111] to-[#0B0B0B] relative overflow-hidden">
-      {/* Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#D62828]/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="text-center mb-20">
@@ -43,8 +42,7 @@ export default function Benefits() {
       </div>
 
       <div className="max-w-5xl mx-auto relative">
-        {/* Linha Central da Timeline */}
-        <div className="absolute left-1/2 w-[1px] h-full bg-gradient-to-b from-[#D62828]/50 via-[#D62828]/20 to-transparent transform -translate-x-1/2 hidden md:block" />
+
 
         {benefits.map((step, index) => {
           const Icon = step.icon;
@@ -55,7 +53,6 @@ export default function Benefits() {
               step.side === "right" ? "md:flex-row-reverse" : ""
             )}>
               
-              {/* ÍCONE COM EFEITO GLOW */}
               <motion.div 
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -67,15 +64,13 @@ export default function Benefits() {
                     strokeWidth={1.5} 
                     className="w-16 h-16 md:w-20 md:h-20 text-[#D62828] opacity-70 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500" 
                   />
-                  {/* Glow interno do card */}
+
                   <div className="absolute inset-0 bg-[#D62828]/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                 </div>
               </motion.div>
 
-              {/* PONTO CENTRAL */}
               <div className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 bg-[#D62828] rounded-full shadow-[0_0_20px_#D62828] z-10 hidden md:block" />
 
-              {/* TEXTO */}
               <motion.div 
                 initial={{ opacity: 0, x: step.side === "left" ? 30 : -30 }}
                 whileInView={{ opacity: 1, x: 0 }}

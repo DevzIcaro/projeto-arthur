@@ -7,7 +7,6 @@ import { Button } from "@/components/ui/button";
 export default function Hero() {
     return (
         <section className="relative min-h-screen w-full flex items-center justify-center bg-[#0B0B0B] overflow-hidden">
-            {/* 1. Imagem de Fundo (Camada inferior) */}
             <div className="absolute inset-0 z-0">
                 <img
                     src="./src/assets/gym.jpg"
@@ -17,14 +16,12 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B]/80 to-transparent" />
             </div>
 
-            {/* Elementos Decorativos "Absolute" (Ocultos em mobile, visíveis em desktops) */}
             <div className="absolute inset-0 pointer-events-none overflow-hidden">
                 <div className="hidden lg:block absolute top-[78%] left-13 w-32 h-32 border-b border-l border-[#D62828]/40 z-20" />
                 <div className="hidden lg:block absolute top-[20%] right-12 w-32 h-32 border-t border-r border-[#D62828]/40 z-20" />
                 <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-[#D62828]/10 blur-[120px]" />
             </div>
 
-            {/* Conteúdo Principal */}
             <div className="container mx-auto px-6 lg:px-16 max-w-8xl flex flex-col items-start justify-center relative z-10 pt-20">
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -49,7 +46,6 @@ export default function Hero() {
                     </p>
                 </motion.div>
 
-                {/* Botões - Ajustados para empilhar no mobile */}
                 <motion.div
                     className="flex flex-col sm:flex-row gap-4 mt-10 w-full sm:w-auto"
                     initial={{ opacity: 0 }}

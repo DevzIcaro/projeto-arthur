@@ -14,7 +14,6 @@ const specialties = [
 
 export default function Specialties() {
   return (
-    // Gradiente aplicado aqui: do cinza escuro (#111111) ao preto profundo (#0B0B0B)
     <section className="py-24 bg-gradient-to-b from-[#111111] to-[#0B0B0B] relative overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         <div className="mb-20 text-center">
@@ -25,7 +24,6 @@ export default function Specialties() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 relative">
-          {/* Linhas de Conexão - Mantidas com z-index baixo */}
           <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0 opacity-40">
              <defs>
                <filter id="glow">
@@ -57,7 +55,6 @@ export default function Specialties() {
               transition={{ delay: index * 0.1 }}
               className="group p-8 border border-white/5 bg-[#0B0B0B]/40 backdrop-blur-sm relative z-10 overflow-hidden hover:border-[#D62828]/30 transition-all duration-500"
             >
-              {/* Brilho sutil no hover */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#D62828]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               
               <div className="mb-6 inline-block p-3 bg-[#0B0B0B] border border-white/10 group-hover:border-[#D62828] transition-colors">

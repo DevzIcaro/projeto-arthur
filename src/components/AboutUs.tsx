@@ -6,12 +6,10 @@ import { Award, Users, Target } from "lucide-react";
 export default function AboutSection() {
   return (
     <section className="relative w-full py-24 bg-[#0B0B0B] overflow-hidden">
-      {/* Decorative Glow */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#D62828]/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         
-        {/* Lado Esquerdo: Imagem com moldura tecnológica */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -19,7 +17,7 @@ export default function AboutSection() {
           className="relative"
         >
           <div className="aspect-[4/5] bg-[#111111] rounded-2xl overflow-hidden border border-white/5 relative group">
-            {/* Imagem Placeholder - Substitua pela foto do profissional */}
+
             <div className="absolute inset-0 bg-gradient-to-tr from-[#0B0B0B] to-transparent z-10" />
             <img 
               src="./src/assets/pic1.png" 
@@ -27,7 +25,6 @@ export default function AboutSection() {
               className="w-full h-full object-cover transition-all duration-700"
             />
             
-            {/* Detalhes Técnicos sobre a imagem */}
             <div className="absolute bottom-8 left-8 z-20">
               <p className="text-white/80 font-medium uppercase tracking-[0.2em] text-sm">Direção Clínica</p>
               <h4 className="text-2xl font-bold text-white">RATH Performance</h4>
@@ -35,7 +32,6 @@ export default function AboutSection() {
           </div>
         </motion.div>
 
-        {/* Lado Direito: Conteúdo de Autoridade */}
         <div className="space-y-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -52,7 +48,6 @@ export default function AboutSection() {
             </p>
           </motion.div>
 
-          {/* Destaques (Stats) */}
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/5">
             {[
               { label: "Anos de Pista", value: "15+" },

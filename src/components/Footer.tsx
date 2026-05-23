@@ -31,7 +31,6 @@ export default function Footer() {
             <div className="container mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
 
-                    {/* Coluna 1: Logo e Identidade */}
                     <div className="flex flex-col gap-6">
                         <h2 className="text-3xl font-bold tracking-tighter text-[#F5F5F5]">
                             RATH<span className="text-[#D62828]">.</span>
@@ -44,7 +43,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Coluna 2: Navegação */}
                     <div className="flex flex-col gap-6">
                         <h4 className="text-white font-medium text-sm uppercase tracking-widest">Navegação</h4>
                         <nav className="flex flex-col gap-3">
@@ -62,7 +60,6 @@ export default function Footer() {
                         </nav>
                     </div>
 
-                    {/* Coluna 3: Contatos */}
                     <div className="flex flex-col gap-6">
                         <h4 className="text-white font-medium text-sm uppercase tracking-widest">Contato</h4>
                         <div className="flex flex-col gap-4">
@@ -87,7 +84,6 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    {/* Coluna 4: Filosofia */}
                     <div className="flex flex-col gap-6">
                         <h4 className="text-white font-medium text-sm uppercase tracking-widest">Especialidade</h4>
                         <p className="text-white/40 text-sm leading-relaxed italic font-sans">
@@ -97,7 +93,6 @@ export default function Footer() {
                     </div>
                 </div>
 
-                {/* Copyright */}
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-white/30 text-[11px] tracking-wider uppercase">
                         © 2026 RATH Performance. Todos os direitos reservados.

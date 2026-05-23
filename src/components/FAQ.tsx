@@ -31,7 +31,6 @@ const faqData = [
 export default function FAQ() {
   return (
     <section className="w-full py-24 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B] to-[#2a0808] relative overflow-hidden">
-      {/* Glow de fundo */}
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

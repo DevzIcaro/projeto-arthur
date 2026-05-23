@@ -41,7 +41,6 @@ export default function Contact() {
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-          {/* Lado Esquerdo: Info e Botões */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -77,7 +76,7 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Lado Direito: Iframe Estilizado */}
+
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
