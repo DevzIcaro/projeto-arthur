@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { ReactHTMLElement } from "react";
 
 export default function Hero() {
 
@@ -51,9 +50,9 @@ export default function Hero() {
                         Performance de Elite
                     </div>
 
-                    <h1 className="text-5xl md:text-8xl xl:text-9xl font-bold tracking-tighter text-[#F5F5F5] leading-[0.9]">
+                    <h1 className="text-[3.0rem] md:text-5xl xl:text-7xl font-bold tracking-tighter text-[#F5F5F5] leading-[0.85]">
                         RATH <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D62828] to-[#ff4d4d]">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D62828] to-[#ff4d4d] text-[2.5rem] md:text-[4rem] xl:text-[7rem] leading-[1]">
                             PERFORMANCE
                         </span>
                     </h1>
