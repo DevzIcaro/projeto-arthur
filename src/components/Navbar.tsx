@@ -15,7 +15,11 @@ const links = [
     { name: "Contatos", href: "#contatos" },
 ];
 
-export default function Navbar() {
+interface HeroProps {
+    imagePath?: string;
+}
+
+export default function Navbar({imagePath}: HeroProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -58,7 +62,7 @@ export default function Navbar() {
             <div className="container mx-auto px-6 flex items-center justify-between">
                 <a href="#hero" onClick={(e) => scrollToSection(e, "#hero")} className="relative z-[201]">
                     <img 
-                        src="./src/assets/logo.png" 
+                        src={imagePath || "./src/assets/logo.png"} 
                         alt="Logo" 
                         className="h-10 md:h-12 w-auto object-contain transition-transform hover:scale-105"
                     />

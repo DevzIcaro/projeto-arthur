@@ -15,11 +15,12 @@ import Footer from "@/components/Footer";
 
 import heroImage from "../assets/gym.jpg";
 import aboutImage from "src/assets/pic1.png"
+import navImage from "src/assets/logo.png"
 
 ---
 
 <Layout>
-  <Navbar client:load />
+  <Navbar client:load imagePath={navImage.src}/>
   <main>
     <div id="hero">
       <Hero client:load imagePath={heroImage.src}/>
