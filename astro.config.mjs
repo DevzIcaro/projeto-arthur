@@ -11,6 +11,9 @@ export default defineConfig({
   base: '/projeto-arthur',
 
   vite: {
-    plugins: [tailwindcss()]
+    plugins: [
+      tsconfigPaths(),
+      tailwindcss(),
+    ]
   }
 });
