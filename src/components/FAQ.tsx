@@ -32,7 +32,7 @@ export default function FAQ() {
   return (
     <section className="w-full py-24 bg-gradient-to-t from-[#0B0B0B] via-[#0B0B0B] to-[#2a0808] relative overflow-hidden">
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -46,27 +46,22 @@ export default function FAQ() {
           </h3>
         </motion.div>
 
-        <Accordion type="single" collapsible className="w-full space-y-4">
+        <Accordion type="single" collapsible className="w-full space-y-4 cursor-pointer">
           {faqData.map((item, index) => (
-            <motion.div
+            <AccordionItem
               key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              viewport={{ once: true }}
+              value={`item-${index}`}
+              className="border border-white/10  bg-[#111111] hover:border-[#D62828]/50 transition-colors duration-300 px-6"
             >
-              <AccordionItem 
-                value={`item-${index}`}
-                className="border border-white/10 bg-[#111111] hover:border-[#D62828]/50 transition-colors duration-300 px-6"
+              <AccordionTrigger
+                className="text-[#F5F5F5] hover:no-underline py-6 text-left text-lg font-medium cursor-pointer transition-all active:scale-[0.99] group"
               >
-                <AccordionTrigger className="text-[#F5F5F5] cursor-pointer hover:no-underline py-6 text-left text-lg font-medium">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-[#F5F5F5]/70 cursor-pointer leading-relaxed pb-6 text-base">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            </motion.div>
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-[#F5F5F5]/70 leading-relaxed pb-6 text-base">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
           ))}
         </Accordion>
       </div>
