@@ -2,8 +2,7 @@
 import { defineConfig } from 'astro/config';
 
 import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/vite';
-import tsconfigPaths from 'vite-tsconfig-paths';
+import tailwindv4 from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,8 +12,7 @@ export default defineConfig({
 
   vite: {
     plugins: [
-      tsconfigPaths(),
-      tailwindcss()
+      tailwindv4()
     ]
   }
 });
