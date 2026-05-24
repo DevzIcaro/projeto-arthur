@@ -12,13 +12,15 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+
+
 ---
 
 <Layout>
   <Navbar client:load />
   <main>
     <div id="hero">
-      <Hero client:load />
+      <Hero client:load  imagePath={"./src/assets/gym.jpg"}/>
     </div>
 	<div id="metodologias">
 		<Specialities client:load/>

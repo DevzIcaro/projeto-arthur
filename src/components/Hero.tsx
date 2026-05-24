@@ -4,7 +4,12 @@ import { motion } from "framer-motion";
 import { ArrowRight, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export default function Hero() {
+interface HeroProps {
+    imagePath?: string;
+}
+
+
+export default function Hero({imagePath}: HeroProps) {
 
     const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
@@ -25,7 +30,7 @@ export default function Hero() {
         <section className="relative min-h-screen w-full flex items-center justify-center bg-[#0B0B0B] overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="./src/assets/gym.jpg"
+                    src={imagePath || "./src/assets/gym.jpg"}
                     alt="Background"
                     className="w-full h-full object-cover blur-[2px] opacity-30 scale-105"
                 />
