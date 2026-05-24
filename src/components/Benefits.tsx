@@ -37,7 +37,7 @@ export default function Benefits() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#D62828]/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="text-center mb-20">
-        <h2 className="text-[#D62828] text-xs font-bold tracking-[0.3em] uppercase mb-2">Vantagem Competitiva</h2>
+        <h2 className="text-[#D62828] text-xl font-bold tracking-[0.3em] uppercase mb-2">Benefícios</h2>
         <h3 className="text-[#F5F5F5] text-4xl md:text-6xl font-bold tracking-tight">O Diferencial RATH</h3>
       </div>
 

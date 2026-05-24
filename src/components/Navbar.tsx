@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 
 const links = [
     { name: "Home", href: "#hero" },
-    { name: "Especialidades", href: "#especialidades" },
+    { name: "Metodologias", href: "#metodologias" },
     { name: "Benefícios", href: "#beneficios" },
     { name: "Sobre", href: "#sobre" },
     { name: "Formações", href: "#formacoes" },
@@ -116,12 +116,12 @@ export default function Navbar() {
                                 ))}
                             </div>
                             
-                            <div className="mt-auto pb-6">
-                                <p className="text-[#C6A24C] text-xs uppercase tracking-[0.3em] font-bold">
-                                    Natanael Vicente & Rufatto
+                            <div className="mt-auto pb-3">
+                                <p className="text-[#FFF] text-xs uppercase tracking-[0.3em] font-bold">
+                                    RATH<span className="text-[#D62828]">.</span>
                                 </p>
                                 <p className="text-white/20 text-[10px] uppercase mt-1">
-                                    DNV Advocacia
+                                    Arthur Carneiro - Todos os direitos reservados © 2015
                                 </p>
                             </div>
                         </motion.div>

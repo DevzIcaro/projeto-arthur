@@ -16,7 +16,7 @@ const contactOptions = [
     name: "Instagram",
     icon: IoLogoInstagram,
     label: "@rathperformance",
-    href: "https://instagram.com/rathperformance",
+    href: "https://www.instagram.com/rath_performance?igsh=aHdqaTFuZ29sZzlx",
   },
   {
     name: "E-mail",
@@ -28,15 +28,15 @@ const contactOptions = [
     name: "Localização",
     icon: MapPin,
     label: "Santa Fé do Sul - SP",
-    href: "https://maps.app.goo.gl/fXSkHhM6XPEUW3Nn7",
+    href: "https://maps.app.goo.gl/ZfhpUM9Z4Ru97JCc6",
   },
 ];
 
 export default function Contact() {
   return (
     <section className="w-full py-24 bg-[#0B0B0B] text-[#F5F5F5] relative overflow-hidden">
-      
-      <div className="absolute bottom-35 right-10 w-[750px] h-[500px] bg-[#D62828]/20 blur-[150px] rounded-full" />
+
+      <div className="absolute bottom-35 right-10 w-187.5 h-125 bg-[#D62828]/20 blur-[150px] rounded-full" />
 
       <div className="container mx-auto px-6 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -81,11 +81,11 @@ export default function Contact() {
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative h-[500px] w-full overflow-hidden border border-white/5"
+            className="relative h-125 w-full overflow-hidden border border-white/5"
           >
             <div className="absolute inset-0 bg-[#111111] z-0" />
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303.46776282584375!2d-50.931682959568455!3d-20.213584136463112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9499c1537fc12db9%3A0xf498c9eab9b9d4e!2sR.%20Vinte%2C%2082%2C%20Santa%20F%C3%A9%20do%20Sul%20-%20SP%2C%2015775-000!5e0!3m2!1spt-BR!2sbr!4v1779563126052!5m2!1spt-BR!2sbr"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29954.90254708055!2d-50.96249281068231!3d-20.202238905137985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9499c14d8e677679%3A0xca204176452cd67d!2sSanta%20F%C3%A9%20do%20Sul%2C%20SP%2C%2015775-000!5e0!3m2!1spt-BR!2sbr!4v1779652048786!5m2!1spt-BR!2sbr"
               width="100%"
               height="100%"
               style={{

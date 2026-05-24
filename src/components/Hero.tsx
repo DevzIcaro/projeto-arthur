@@ -3,8 +3,25 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Activity } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import type { ReactHTMLElement } from "react";
 
 export default function Hero() {
+
+    const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        e.preventDefault();
+        const elem = document.getElementById(targetId.replace("#", ""));
+        if (elem) {
+            const headerOffSet = 80;
+            const elementPosition = elem.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffSet;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <section className="relative min-h-screen w-full flex items-center justify-center bg-[#0B0B0B] overflow-hidden">
             <div className="absolute inset-0 z-0">
@@ -52,11 +69,22 @@ export default function Hero() {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
                 >
-                    <Button className="bg-[#D62828] hover:bg-[#b92222] text-white px-8 py-6 rounded-none text-sm uppercase tracking-[0.1em] transition-all">
-                        Agendar Avaliação <ArrowRight className="ml-2 w-4 h-4" />
+                    <Button className="bg-[#D62828] hover:bg-[#b92222] cursor-pointer text-white px-8 py-6 rounded-none text-sm uppercase tracking-[0.1em] transition-all">
+                        <a href="https://wa.me/5517981111087" target="_blank" className="flex flex-row">
+                            Agendar Avaliação <ArrowRight className="ml-2 w-4 h-4 mt-0.5" />
+                        </a>
                     </Button>
-                    <Button variant="outline" className="border-white/10 bg-transparent text-[#F5F5F5] hover:bg-white/10 px-8 py-6 rounded-none text-sm uppercase tracking-[0.1em]">
-                        Metodologia
+                    <Button
+                        variant="outline"
+                        asChild
+                        className="border-white/10 bg-transparent text-[#F5F5F5] cursor-pointer hover:bg-white/80 px-8 py-6 rounded-none text-sm uppercase tracking-[0.1em]"
+                    >
+                        <a
+                            href="#metodologias"
+                            onClick={(e) => scrollToSection(e, "#metodologias")}
+                        >
+                            Metodologia
+                        </a>
                     </Button>
                 </motion.div>
             </div>

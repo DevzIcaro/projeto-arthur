@@ -24,7 +24,7 @@ export default function Specialties() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 relative">
-          <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0 opacity-40">
+          <svg className="absolute inset-0 w-full h-full pointer-events-none hidden lg:block z-0 opacity-100">
              <defs>
                <filter id="glow">
                  <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>

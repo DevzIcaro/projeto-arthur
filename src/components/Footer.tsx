@@ -63,7 +63,7 @@ export default function Footer() {
                     <div className="flex flex-col gap-6">
                         <h4 className="text-white font-medium text-sm uppercase tracking-widest">Contato</h4>
                         <div className="flex flex-col gap-4">
-                            <a href="#" className="flex items-start gap-3 group hover:text-white transition-colors">
+                            <a href="https://maps.app.goo.gl/ZfhpUM9Z4Ru97JCc6" className="flex items-start gap-3 group hover:text-white transition-colors">
                                 <MapPin size={18} className="text-[#D62828] shrink-0 mt-1" />
                                 <span className="text-white/60 text-sm leading-relaxed">
                                     Rua 20, 82, Centro.<br /> Santa Fé do Sul - SP
@@ -73,7 +73,7 @@ export default function Footer() {
                                 <MessageCircle size={18} className="text-[#D62828]" />
                                 <span className="text-white/60 text-sm">(17) 98111-1087</span>
                             </a>
-                            <a href="https://instagram.com/rathperformance" target="_blank" className="flex items-center gap-3 group hover:text-white transition-colors">
+                            <a href="https://www.instagram.com/rath_performance?igsh=aHdqaTFuZ29sZzlx" target="_blank" className="flex items-center gap-3 group hover:text-white transition-colors">
                                 <IoLogoInstagram size={18} className="text-[#D62828]" />
                                 <span className="text-white/60 text-sm">@rathperformance</span>
                             </a>
