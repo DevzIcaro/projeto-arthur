@@ -7,7 +7,7 @@ import { IoLogoInstagram } from "react-icons/io";
 // Links exatos conforme solicitado
 const contactLinks = [
   { icon: IoLogoInstagram, href: "https://www.instagram.com/rath_performance?igsh=aHdqaTFuZ29sZzlx", label: "Instagram" },
-  { icon: MessageCircle, href: "https://wa.me/5517981111087", label: "WhatsApp" },
+  { icon: MessageCircle, href: "https://wa.me/5517981111087?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação", label: "WhatsApp" },
   { icon: MapPin, href: "https://maps.app.goo.gl/ZfhpUM9Z4Ru97JCc6", label: "Local" },
   { icon: Mail, href: "mailto:contato@rath.com.br", label: "E-mail" },
 ];

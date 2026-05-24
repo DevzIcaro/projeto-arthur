@@ -69,7 +69,7 @@ export default function Footer() {
                                     Rua 20, 82, Centro.<br /> Santa Fé do Sul - SP
                                 </span>
                             </a>
-                            <a href="https://wa.me/5517981111087" target="_blank" className="flex items-center gap-3 group hover:text-white transition-colors">
+                            <a href="https://wa.me/5517981111087?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação" target="_blank" className="flex items-center gap-3 group hover:text-white transition-colors">
                                 <MessageCircle size={18} className="text-[#D62828]" />
                                 <span className="text-white/60 text-sm">(17) 98111-1087</span>
                             </a>

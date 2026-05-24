@@ -10,7 +10,7 @@ const contactOptions = [
     name: "WhatsApp",
     icon: MessageCircle,
     label: "+55 (17) 98111-1087",
-    href: "https://wa.me/5517981111087",
+    href: "https://wa.me/5517981111087?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação",
   },
   {
     name: "Instagram",

@@ -74,7 +74,7 @@ export default function Hero({imagePath}: HeroProps) {
                     transition={{ delay: 0.4, duration: 0.8 }}
                 >
                     <Button className="bg-[#D62828] hover:bg-[#b92222] cursor-pointer text-white px-8 py-6 rounded-none text-sm uppercase tracking-[0.1em] transition-all">
-                        <a href="https://wa.me/5517981111087" target="_blank" className="flex flex-row">
+                        <a href="https://wa.me/5517981111087?text=Olá,%20gostaria%20de%20agendar%20uma%20avaliação" target="_blank" className="flex flex-row">
                             Agendar Avaliação <ArrowRight className="ml-2 w-4 h-4 mt-0.5" />
                         </a>
                     </Button>
