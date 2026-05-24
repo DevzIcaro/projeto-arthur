@@ -13,6 +13,8 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
+import heroImage from "../assets/gym.jpg";
+import aboutImage from "src/assets/pic1.png"
 
 ---
 
@@ -20,7 +22,7 @@ import Footer from "@/components/Footer";
   <Navbar client:load />
   <main>
     <div id="hero">
-      <Hero client:load  imagePath={"./src/assets/gym.jpg"}/>
+      <Hero client:load imagePath={heroImage.src}/>
     </div>
 	<div id="metodologias">
 		<Specialities client:load/>
@@ -29,7 +31,7 @@ import Footer from "@/components/Footer";
 		<Benefits client:load/>
 	</div>
   <div id="sobre">
-    <AboutSection client:load/>
+    <AboutSection client:load imagePath={aboutImage.src}/>
   </div>
   <div id="formacoes">
     <Formations client:load/>

@@ -11,17 +11,19 @@ const contactLinks = [
   { icon: MapPin, href: "https://maps.app.goo.gl/ZfhpUM9Z4Ru97JCc6", label: "Local" },
   { icon: Mail, href: "mailto:contato@rath.com.br", label: "E-mail" },
 ];
+interface AboutProps {
+    imagePath?: string;
+}
 
-export default function AboutSection() {
+
+export default function AboutSection({imagePath}: AboutProps) {
   return (
     <section className="relative w-full py-24 bg-[#0B0B0B] overflow-hidden text-[#F5F5F5]">
-      {/* Glows de profundidade */}
       <div className="absolute top-1/2 left-0 w-[400px] h-[400px] bg-[#D62828]/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-[#D62828]/5 blur-[150px] rounded-full pointer-events-none" />
 
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
         
-        {/* Lado Esquerdo: Imagem */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -31,14 +33,13 @@ export default function AboutSection() {
           <div className="aspect-[4/5] rounded-xl overflow-hidden border border-white/10 relative group">
             <div className="absolute inset-0 bg-[#D62828]/20 mix-blend-overlay z-10" />
             <img
-              src="./src/assets/pic1.png"
+              src={imagePath || "./src/assets/pic1.png"}
               alt="Especialista RATH"
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </motion.div>
 
-        {/* Lado Direito: Conteúdo */}
         <div className="space-y-8">
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
             <h2 className="text-[#D62828] font-bold tracking-[0.2em] uppercase text-xs mb-4">A Ciência por trás do movimento</h2>
@@ -51,7 +52,6 @@ export default function AboutSection() {
             </p>
           </motion.div>
 
-          {/* Stats */}
           <div className="grid grid-cols-3 gap-6 pt-8 border-t border-white/5">
             {[ { label: "Anos", value: "10+" }, { label: "Atletas", value: "500+" }, { label: "Protocolos", value: "30+" } ].map((stat, i) => (
               <div key={i}>
@@ -61,7 +61,6 @@ export default function AboutSection() {
             ))}
           </div>
 
-          {/* Links de Contato com seus HREFs */}
           <div className="flex flex-wrap justify-between gap-4 pt-4">
             {contactLinks.map((link, i) => (
               <motion.a
